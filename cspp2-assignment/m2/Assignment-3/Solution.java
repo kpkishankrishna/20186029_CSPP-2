@@ -9,8 +9,9 @@ public class Solution {
     protected Solution() { }
     /**
     *Do not modify this main function.
+    *@param args is an argument
     */
-    public static void main(String[] args) {
+    public static void main(final String[] args) {
         Scanner s = new Scanner(System.in);      
         long base = s.nextLong();
         long exponent = s.nextLong();
@@ -19,8 +20,10 @@ public class Solution {
     }
     /**
     *Need to write the power function and print the output.
+    *@param a is an argument
+    *@param b is an argument
     */
-    public static long power(long a, long b) {
+    public static long power(final long a, final long b) {
         if (b == 0) {
             return 1;
         }
