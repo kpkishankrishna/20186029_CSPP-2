@@ -19,8 +19,8 @@ public class Solution {
 		double s = Math.sqrt((b*b)-4*a*c);
 		double ps = (-b + s)/(2*a);
 		double ns = (-b - s)/(2*a) ;
-		System.out.println(ps);
-		System.out.println(ns);
+		System.out.print(ps + " " + ns);
+		// System.out.print(ns);
 		
 
 	}
