@@ -12,7 +12,7 @@ public class Solution {
     *Do not modify this main function.
     *@param args is an argument
     */
-    public static void main(String[] args) {
+    public static void main(final String[] args) {
         Scanner scan = new Scanner(System.in);
         int a = scan.nextInt();
         int b = scan.nextInt();
@@ -28,7 +28,7 @@ public class Solution {
     *@param ps is an argument
     *@param ns is an argument
     */
-    public static void rootsOfQuadraticEquation(int a, int b, int c) {
+    public static void rootsOfQuadraticEquation(final int a, final int b, final int c) {
         double s = Math.sqrt((b * b) - 2 * 2 * a * c);
         double ps = (-b + s) / (2 * a);
         double ns = (-b - s) / (2 * a);
