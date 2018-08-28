@@ -28,8 +28,8 @@ public class Solution {
     *@param ps is an argument
     *@param ns is an argument
     */
-    public static void rootsOfQuadraticEquation(final int a
-        , final int b, final int c) {
+    public static void rootsOfQuadraticEquation(final int a,
+        final int b, final int c) {
         double s = Math.sqrt((b * b) - 2 * 2 * a * c);
         double ps = (-b + s) / (2 * a);
         double ns = (-b - s) / (2 * a);
