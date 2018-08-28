@@ -12,7 +12,7 @@ public class Solution {
     *@param args is an argument
     */
     public static void main(final String[] args) {
-        Scanner s = new Scanner(System.in);      
+        Scanner s = new Scanner(System.in);
         long base = s.nextLong();
         long exponent = s.nextLong();
         long result = power(base, exponent);
@@ -22,6 +22,7 @@ public class Solution {
     *Need to write the power function and print the output.
     *@param a is an argument
     *@param b is an argument
+    *@param return is an argument
     */
     public static long power(final long a, final long b) {
         if (b == 0) {
