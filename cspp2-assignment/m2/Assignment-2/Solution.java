@@ -24,9 +24,6 @@ public class Solution {
     *@param a is an argument
     *@param b is an argument
     *@param c is an argument
-    *@param s is an argument
-    *@param ps is an argument
-    *@param ns is an argument
     */
     public static void rootsOfQuadraticEquation(final int a,
         final int b, final int c) {
