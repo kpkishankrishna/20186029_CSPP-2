@@ -25,9 +25,9 @@ public class Solution {
     *@param result is an argument
     */
     public static long power(final long a, final long b) {
-        // if (b == 0) {
-        //     return 1;
-        // }
+        if (b == 0) {
+            return 1;
+        }
         long result = a * power(a, b - 1);
         return result;
 
