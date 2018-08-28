@@ -1,8 +1,12 @@
 import java.util.Scanner;
 
 public class Solution {
-	/*
-	Do not modify this main function.
+	/**
+	*Do not modify this main function.
+	*/
+	protected Solution() { }
+	/**
+	*Do not modify this main function.
 	*/
 	public static void main(String[] args) {
 		Scanner s=new Scanner(System.in);      
@@ -11,8 +15,8 @@ public class Solution {
         long result=power(base,exponent);
         System.out.println(result);
 	}
-	/*
-	Need to write the power function and print the output.
+	/**
+	*Need to write the power function and print the output.
 	*/
 	public static long power(long a, long b) {
 		if (b == 0)
