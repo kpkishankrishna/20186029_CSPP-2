@@ -16,9 +16,9 @@ public class Solution {
     */
     public static void rootsOfQuadraticEquation(int a, int b, int c)
     {
-        double s = Math.sqrt((b * b) - 4 * a * c);
+        double s = Math.sqrt((b * b) - 2 * 2 * a * c);
         double ps = (-b + s) / (2 * a);
-        double ns = (-b - s) / (2 * a) ;
+        double ns = (-b - s) / (2 * a);
         System.out.print(ps + " " + ns);
         // System.out.print(ns);
 
