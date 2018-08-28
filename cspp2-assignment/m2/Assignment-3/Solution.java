@@ -22,7 +22,7 @@ public class Solution {
     *Need to write the power function and print the output.
     *@param a is an argument
     *@param b is an argument
-    *@param result is an argument
+
     */
     public static long power(final long a, final long b) {
         if (b == 0) {
