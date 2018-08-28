@@ -21,7 +21,7 @@ public class Solution {
         double ns = (-b - s) / (2 * a) ;
         System.out.print(ps + " " + ns);
         // System.out.print(ns);
-        
+
 
     }
 }
