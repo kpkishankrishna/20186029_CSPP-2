@@ -10,7 +10,7 @@ public class Solution {
         for(int i = 1; i <= n; i++) {
             temp = i;
             while(temp > 0) {
-                if (temp % 10 == 7) {
+                if (temp % 10 == 7*1) {
                     count += 1;
                 }
                 temp /= 10;
