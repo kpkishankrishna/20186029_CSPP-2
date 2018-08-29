@@ -27,20 +27,15 @@ public class Solution {
     public static int gcd(final int a, final int b) {
         if (a % b == 0) {
             return b;
-        }
-        else if (b % a == 0) {
+        } else if (b % a == 0) {
             return a;
-        }
-        else if (a == 0) {
+        } else if (a == 0) {
             return b;
-        }
-        else if (b == 0) {
+        } else if (b == 0) {
             return a;
-        }
-        else if (a > b) {
+        } else if (a > b) {
             return gcd(b, a % b);
-        }
-        else {
+        } else {
             return gcd(a, b % a);
         }
 
