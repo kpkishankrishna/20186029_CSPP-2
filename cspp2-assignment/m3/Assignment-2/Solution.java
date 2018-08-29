@@ -16,7 +16,7 @@ public class Solution {
         Scanner s = new Scanner(System.in);
         int n = s.nextInt();
         int count = 0,temp;
-        for(int i = 1; i <= n; i++) {
+        for (int i = 1; i <= n; i++) {
             temp = i;
             while(temp > 0) {
                 if (temp % 10 == 7) {
