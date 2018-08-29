@@ -16,7 +16,7 @@ public class Solution {
     /*
 	Need to write the gcd function and print the output.
 	*/
-    public static int gcd(int a, int b) {
+    public static int gcd(final int a, final int b) {
         if (a % b == 0) {
             return b;
         }
