@@ -18,7 +18,7 @@ public class Solution {
         int count = 0, temp;
         for (int i = 1; i <= n; i++) {
             temp = i;
-            while(temp > 0) {
+            while (temp > 0) {
                 if (temp % 10 == 7) {
                     count += 1;
                 }
