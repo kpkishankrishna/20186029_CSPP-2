@@ -17,18 +17,24 @@ public class Solution {
 	Need to write the gcd function and print the output.
 	*/
     public static int gcd(int a, int b) {
-        if (a % b == 0)
+        if (a % b == 0) {
             return b;
-        else if (b % a == 0)
+        }
+        else if (b % a == 0) {
             return a;
-        else if (a == 0)
+        }
+        else if (a == 0) {
             return b;
-        else if (b == 0)
+        }
+        else if (b == 0) {
             return a;
-        else if (a > b)
-            return gcd(b, a%b);
-        else
-            return gcd(a, b%a);
+        }
+        else if (a > b) {
+            return gcd(b, a % b);
+        }
+        else {
+            return gcd(a, b % a);
+        }
 
     }
 }
