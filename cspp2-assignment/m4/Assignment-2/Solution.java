@@ -16,9 +16,11 @@ public class Solution {
             for (int j = 0; j<q; j++)
                 b[i][j] = sc.nextInt();
         int c[][] = new int[m][n];
-        for (int i = 0; i<m; i++)
-            for (int j = 0; j<n; j++)
+        for (int i = 0; i<m; i++){
+            for (int j = 0; j<n; j++){
                 c[i][j] = a[i][j] + b[i][j];
+            }
+        }
         if ((m==p) && (n==q)) {
             for (int i = 0; i<m; i++) {
                 for (int j = 0; j<n; j++) 
