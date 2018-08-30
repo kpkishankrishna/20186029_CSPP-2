@@ -3,11 +3,11 @@ import java.util.Scanner;
 *Matrices addition.
 */
 public class Solution {
-    /** 
+    /**
     *Fill the main function to print resultant of addition of matrices.
     */
     protected Solution() { }
-    /** 
+    /**
     *Fill the main function to print resultant of addition of matrices.
     *@param args is argument.
     */
