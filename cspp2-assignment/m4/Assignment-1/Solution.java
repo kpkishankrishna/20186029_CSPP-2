@@ -12,7 +12,12 @@ public class Solution {
     *@param args is argument.
     */
     public static void main(String[] args) {
+
+
+
         Scanner sc=new Scanner(System.in);
+
+        
         int n= sc.nextInt();
         int a[] = new int[n];
         for(int i =0; i < a.length; i++) {
@@ -22,7 +27,7 @@ public class Solution {
         Arrays.sort(a);
         // System.out.println(Arrays.toString(a));
         // System.out.println("............");
-        System.out.println(a[a.length-1]);
+        System.out.println(a[a.length - 1]);
 
     }
 }
