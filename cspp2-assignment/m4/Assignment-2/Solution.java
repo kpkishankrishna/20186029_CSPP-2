@@ -27,7 +27,7 @@ public class Solution {
              }
         }
         else
-            System.out.println("not pssible");
+            System.out.println("not possible");
         
         }
     }
