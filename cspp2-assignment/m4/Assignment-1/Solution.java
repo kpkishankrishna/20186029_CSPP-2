@@ -11,11 +11,11 @@ public class Solution {
     *Fill the main function to print resultant of addition of matrices.
     *@param args is argument.
     */
-    public static void main(String[] args) {
+    public static void main(final String[] args) {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
-        int a[] = new int[n];
-        for (int i =0; i < a.length; i++) {
+        int[] a = new int[n];
+        for (int i = 0; i < a.length; i++) {
             a[i] = sc.nextInt();
         }
         // System.out.println("//////");
