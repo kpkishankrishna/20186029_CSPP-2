@@ -15,27 +15,19 @@ public class Solution {
         for (int i = 0; i<p; i++)
             for (int j = 0; j<q; j++)
                 b[i][j] = sc.nextInt();
-        int c[][] = new int[m][n];
-        for (int i = 0; i<m; i++){
-            for (int j = 0; j<n; j++){
-                c[i][j] = a[i][j] + b[i][j];
-            }
-        }
-        if ((m==p) && (n==q)) {
-            for (int i = 0; i<m; i++) {
-                for (int j = 0; j<n; j++) 
-                    System.out.print(c[i][j]+" ");
-                System.out.print("\n");
-            }
+        if (m==p && n == q) {
+            int c[][] = new int[m][n];
+            for (int i=0; i<m; i++) {
+                for (int j =0; i<n-1; j++) {
+                    c[i][j] = a[i][j] + b[i][j];
+                    System.out.println(c[i][j] + " ");
 
-            
-            
+                } c[i][n-1] = a[i][n-1] + b[i][n-1];
+                 System.out.println(c[i][n-1]);
+             }
         }
-
-        else {
-            System.out.println("not possible");
-        }
-
+        else
+            System.out.println("not pssible");
         
         }
     }
