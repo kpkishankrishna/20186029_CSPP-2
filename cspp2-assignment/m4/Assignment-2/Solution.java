@@ -20,7 +20,7 @@ public class Solution {
             for (int i=0; i<m; i++) {
                 for (int j =0; j<n-1; j++) {
                     c[i][j] = a[i][j] + b[i][j];
-                    System.out.println(c[i][j] + " ");
+                    System.out.print(c[i][j] + " ");
             }
             c[i][n-1] = a[i][n-1] + b[i][n-1];
             System.out.println(c[i][n-1]);
