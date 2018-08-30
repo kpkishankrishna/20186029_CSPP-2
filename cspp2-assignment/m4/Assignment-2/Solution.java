@@ -21,9 +21,10 @@ public class Solution {
                 c[i][j] = a[i][j] + b[i][j];
         if ((m==p) && (n==q)) {
             for (int i = 0; i<m; i++) 
-                for (int j = 0; j<n; j++) 
+                for (int j = 0; j<n; j++) {
                     System.out.print(c[i][j]+" ");
-                System.out.println(" ");
+                }
+                System.out.print("\n");
             
             
         }
