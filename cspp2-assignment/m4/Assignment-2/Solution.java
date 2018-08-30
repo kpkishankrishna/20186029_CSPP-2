@@ -18,7 +18,7 @@ public class Solution {
         if (m==p && n == q) {
             int c[][] = new int[m][n];
             for (int i=0; i<m; i++) {
-                for (int j =0; i<n-1; j++) {
+                for (int j =0; j<n-1; j++) {
                     c[i][j] = a[i][j] + b[i][j];
                     System.out.println(c[i][j] + " ");
                 }
