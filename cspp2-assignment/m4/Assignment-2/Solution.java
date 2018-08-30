@@ -22,10 +22,10 @@ public class Solution {
                     c[i][j] = a[i][j] + b[i][j];
                     System.out.println(c[i][j] + " ");
 
-                } 
+                }
             c[i][n-1] = a[i][n-1] + b[i][n-1];
             System.out.println(c[i][n-1]);
-             }
+            }
         }
         else
             System.out.println("not possible");
