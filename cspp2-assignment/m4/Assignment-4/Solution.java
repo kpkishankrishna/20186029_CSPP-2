@@ -18,9 +18,6 @@ public class Solution {
     *Do not modify this main function.
     *@param args is argument.
     */
-    /**
-    Do not modify the main function
-    */
     public static void main(final String[] args) {
         Scanner sc = new Scanner(System.in);
         String s = sc.nextLine();
