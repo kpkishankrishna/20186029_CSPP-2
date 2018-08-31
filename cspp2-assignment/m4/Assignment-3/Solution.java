@@ -6,10 +6,11 @@ import java.util.Scanner;
 *Do not modify this main function.
 */
 public final class Solution {
-    protected Solution() { 
+    protected Solution() {
         /**
         *Do not modify this main function.
-        */}
+        */
+    }
     /**
     *Do not modify this main function.
     */
@@ -17,7 +18,7 @@ public final class Solution {
         /**
         *Fill the main function to print resultant of addition of matrices.
         */
-        
+
         /**
         *Fill the main function to print resultant of addition of matrices.
         *@param args is argument.
@@ -30,6 +31,11 @@ public final class Solution {
             System.out.println(res);
         }
     }
+    /**
+    *Do not modify this main function.
+    *@param s is argument.
+    *@return args is argument.
+    */
     static String binaryToDecimal(final String s) {
         int binary = 0;
         for (int i = 0; i < s.length(); i++) {
