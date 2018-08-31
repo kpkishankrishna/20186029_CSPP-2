@@ -6,14 +6,19 @@ import java.util.Scanner;
 *Do not modify this main function.
 */
 public final class Solution {
-    protected Solution() {
-        /**
+    /**
         *Do not modify this main function.
         */
+    protected Solution() {
+    /**
+    *Do not modify this main function.
+    */   
     }
     /**
     *Do not modify this main function.
+    *@param args is argument.
     */
+
     public static void main(final String[] args) {
         /**
         *Fill the main function to print resultant of addition of matrices.
