@@ -12,7 +12,7 @@ public final class Solution {
     protected Solution() {
     /**
     *Do not modify this main function.
-    */   
+    */
     }
     /**
     *Do not modify this main function.
