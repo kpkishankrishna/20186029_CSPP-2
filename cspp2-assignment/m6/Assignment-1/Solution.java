@@ -25,12 +25,14 @@ public final class Solution {
                     if (i % j == 0) {
                         c = c + 1;
                     }
+                    
                 }
+                if (c > 3) {
+                        System.out.println(i);    
+                    }
             
             }
-            if (c > 3) {
-                System.out.println(i);    
-            }
+            
             
         }
     }
