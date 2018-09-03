@@ -23,12 +23,12 @@ class InputValidator {
      *
      * @return     { description_of_the_return_value }
      */
-    Boolean validateData(){
+    Boolean validateData() {
         /**.
          * It is the conditional method.
          */
         final int six = 6;
-        if (data.length() >= six){
+        if (data.length() >= six) {
             return true;
         }
         return false;
