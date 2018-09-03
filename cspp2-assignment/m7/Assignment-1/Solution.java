@@ -37,11 +37,11 @@ class InputValidator {
 /**.
  * { item_description }
  */
-public final class Solution{
+public final class Solution {
     /**.
      * Constructs the object.
      */
-    private  Solution(){
+    private  Solution() {
         /**.
          * It is counstructor.
          */
