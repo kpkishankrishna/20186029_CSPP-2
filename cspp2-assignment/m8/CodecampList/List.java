@@ -30,10 +30,14 @@ public class List {
      * This is a hard concept to understand. Discuss with your mentor.
      *
     */
-    
+
     // declare a private int[]
     // don't create the array yet using new
     // that's the job of the List constructor
+
+    /**
+     * int.
+     */
     private int[] intList;
 
 
@@ -55,6 +59,9 @@ public class List {
      * Again, we use private as we don't want that size variable
      * to be accessed by the methods that are outside of the List class.
      * 
+     */
+    /**
+     * { var_description }.
      */
     private int size;
 
