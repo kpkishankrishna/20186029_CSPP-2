@@ -199,7 +199,7 @@ public class List {
      */
     public boolean contains(int item) {
         // Replace the code below
-        return (indexOf(item) > 0);
+        return (indexOf(item) < 0);
     }
 
     /*
