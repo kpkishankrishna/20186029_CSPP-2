@@ -183,7 +183,7 @@ public class List {
         // Replace the code below
         String string = "[";
         for (int i = 0; i < size-1; i++) {
-            string = intList[i] + ", ";
+            string += intList[i] + ", ";
         }
         string = intList[size] + "]";
         System.out.println(string);
