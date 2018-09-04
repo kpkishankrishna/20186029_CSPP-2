@@ -2,7 +2,7 @@ import java.io.BufferedInputStream;
 import java.util.Scanner;
 
 public class List {
-	//Implement all the methods mentioned to build a ListADT
+    //Implement all the methods mentioned to build a ListADT
 
     /*
      * The goal for the list is to store items.
@@ -132,9 +132,9 @@ public class List {
     public void remove(int index) {
         // write the logic for remove here.
         // Think about what to do to the size variable.
-        if (index < size && index >0) {
-            for (int i = index; i < size-1; i++)
-                intList[i] = intList[i+1];
+        if (index < size && index > 0) {
+            for (int i = index; i < size - 1; i++)
+                intList[i] = intList[i + 1];
             intList[size] = 0;
             size--;
         }
@@ -157,7 +157,7 @@ public class List {
      */
     public int get(int index) {
         // Replace the code below to write the code for get
-        for (int i =0; i < size; i++)
+        for (int i = 0; i < size; i++)
             if (i == index)
                 return intList[i];
 
@@ -187,10 +187,10 @@ public class List {
     public String toString() {
         // Replace the code below
         String string = "[";
-        for (int i = 0; i < size-1; i++) {
+        for (int i = 0; i < size - 1; i++) {
             string += intList[i] + ",";
         }
-        string += intList[size-1] + "]";
+        string += intList[size - 1] + "]";
         return string;
 
 
@@ -222,7 +222,7 @@ public class List {
         return -1;
     }
 
-	public static void main(String[] args) {
+    public static void main(String[] args) {
         // create an object of the list to invoke methods on it
         List l = new List();
 
@@ -266,5 +266,5 @@ public class List {
                 break;
             }
         }
-	}
+    }
 }
