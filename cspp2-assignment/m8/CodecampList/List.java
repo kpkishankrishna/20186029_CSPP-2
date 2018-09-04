@@ -1,6 +1,11 @@
+/**
+ * author@ : kpkishankrishna.
+ */
 import java.io.BufferedInputStream;
 import java.util.Scanner;
-
+/**
+ * List of .
+ */
 public class List {
     //Implement all the methods mentioned to build a ListADT
 
@@ -61,6 +66,9 @@ public class List {
      * The purpose of the constructor is to initialize the
      * class variables with some default values.
      */
+    /**
+     * Constructs the object.
+     */
     public List() {
 
         // what are the two variables to be initialized here?
@@ -91,6 +99,13 @@ public class List {
      * 
      * The method returns void (nothing)
      */
+    /**
+     * { function_description }.
+     *
+     * @param      item  The item
+     *
+     * @return     { description_of_the_return_value }
+     */
     public int count(int item) {
         int count = 0;
         for (int i =0; i < size; i++) {
@@ -100,18 +115,33 @@ public class List {
         }
         return count;
     }
-
+/**
+ * add func.
+ *
+ * @param      item  The item
+ */
     public void add(final int item) {
         //Inserts the specified element at the end of the list.
         intList[size] = item;
         size++;
     }
+    /**
+     * add func.
+     *
+     * @param      index  The index
+     * @param      item   The item
+     */
     public void add(int index, int item) {
         for (int i = index + 1; i < size + 1; i++) {
             intList[i + 1] = intList[i];
         }
         intList[index] = item;
     }
+    /**
+     * Adds all.
+     *
+     * @param      items  The items
+     */
     public void addAll(int[] items) {
 
     }
@@ -122,6 +152,11 @@ public class List {
      * to the objects outside the list
      *
      * The method returns an int. Empty list should return 0.
+     */
+    /**
+     * { function_description }.
+     *
+     * @return     { description_of_the_return_value }
      */
     public int size() {
         // replace the code below to implement the size method
@@ -148,6 +183,11 @@ public class List {
      * array = [1,3,0,0,0,0,0,0,0,0]
      * The method returns void (nothing)
      */
+    /**
+     * remove.
+     *
+     * @param      index  The index
+     */
     public void remove(final int index) {
         // write the logic for remove here.
         // Think about what to do to the size variable.
@@ -173,6 +213,13 @@ public class List {
      * in the list then that would mean the item doesn't exist.
      * How do we check if the position is greater than the
      * number of items in the list? Would size variable be useful?
+     */
+    /**
+     * { function_description }.
+     *
+     * @param      index  The index
+     *
+     * @return     { description_of_the_return_value }
      */
     public int get(final int index) {
         // Replace the code below to write the code for get
@@ -205,6 +252,11 @@ public class List {
      * not all the elements of the array.
      *
      */
+    /**
+     * Returns a string representation of the object.
+     *
+     * @return     String representation of the object.
+     */
     public String toString() {
         // Replace the code below
         String string = "[";
@@ -223,6 +275,13 @@ public class List {
      * So, iterate through the list and return true if
      * the item exists and otherwise false
      */
+    /**
+     * contains.
+     *
+     * @param      item  The item
+     *
+     * @return     { description_of_the_return_value }
+     */
     public boolean contains(final int item) {
         // Replace the code below
         return (indexOf(item) >= 0);
@@ -233,6 +292,13 @@ public class List {
      * of the specified element in this list,
      * or -1 if this list does not contain the element.
      */
+    /**
+     * Searches for the first match.
+     *
+     * @param      item  The item
+     *
+     * @return     { description_of_the_return_value }
+     */
     public int indexOf(int item) {
         // Replace the code below
         for (int i = 0; i < size; i++) {
@@ -242,7 +308,11 @@ public class List {
         }
         return -1;
     }
-
+    /**
+     * mian.
+     *
+     * @param      args  The arguments
+     */
     public static void main(final String[] args) {
         // create an object of the list to invoke methods on it
         List l = new List();
