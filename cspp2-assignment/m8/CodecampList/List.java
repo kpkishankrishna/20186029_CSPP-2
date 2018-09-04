@@ -91,6 +91,14 @@ public class List {
      * 
      * The method returns void (nothing)
      */
+    public int count(int item) {
+        int count = 0;
+        for (int i =0; i < size; i++) {
+            if (intList[i] == item) {
+                count++;
+            }
+        }
+    }
     public void add(final int item) {
         //Inserts the specified element at the end of the list.
         intList[size] = item;
