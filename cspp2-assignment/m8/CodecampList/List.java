@@ -98,6 +98,7 @@ public class List {
                 count++;
             }
         }
+        return count;
     }
     public void add(final int item) {
         //Inserts the specified element at the end of the list.
