@@ -100,10 +100,20 @@ public class List {
         }
         return count;
     }
+
     public void add(final int item) {
         //Inserts the specified element at the end of the list.
         intList[size] = item;
         size++;
+    }
+    public void add(int index, int item) {
+        for (int i = index + 1; i < size + 1; i++) {
+            intList[i + 1] = intList[i];
+        }
+        intList[index] = item;
+    }
+    public void addAll(int[] items) {
+
     }
 
     /*
