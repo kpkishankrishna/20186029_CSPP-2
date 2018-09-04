@@ -190,7 +190,7 @@ public class List {
         for (int i = 0; i < size-1; i++) {
             string += intList[i] + ", ";
         }
-        string += intList[size] + "]";
+        string += intList[size-1] + "]";
         return string;
 
 
