@@ -37,7 +37,7 @@ public final class Fibonacci {
     /**
      * list of Fibonacci numbers.
      *
-     * @param      n     { parameter_description }
+     * @param      nthfibonacci     { parameter_description }
      *
      * @return     { description_of_the_return_value }
      */
