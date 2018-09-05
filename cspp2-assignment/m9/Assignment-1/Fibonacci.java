@@ -41,13 +41,13 @@ public final class Fibonacci {
      *
      * @return     { description_of_the_return_value }
      */
-    public static List fib(final int n) {
+    public static List fib(final int nthfibonacci) {
         // todo - complete this method
-        List objectlist = new List(n);
+        List objectlist = new List(nthfibonacci);
         int numberone = 0, numbertwo = 1;
         objectlist.add(numberone);
         objectlist.add(numbertwo);
-        for (int i = 2; i < n; i++) {
+        for (int i = 2; i < nthfibonacci; i++) {
             int fibonaccinumber = numberone + numbertwo;
             objectlist.add(fibonaccinumber);
             numberone = numbertwo;
