@@ -1,5 +1,6 @@
 import java.io.BufferedInputStream;
 import java.util.Scanner;
+import java.util.Arrays;
 
 public class List {
 	//Implement all the methods mentioned to build a ListADT
@@ -285,11 +286,23 @@ public class List {
      */
     public void add(int index,int item) {
          // write the logic 
-        for (int i = size; i > index; i--) {
-            list[i] = list[i-1];
+        if (index < 0) {
+            System.out.println("Negative Index Exception");
         }
-        list[index] = item;
-        size++;
+        if (index == 0 && size ==0) {
+            list[index] = item;
+            size++;
+        }
+        if (index > 0) {
+            for (int i = size; i > index; i--) {
+                list[i] = list[i-1];
+            }
+            list[index] = item;
+            size++;
+        }
+    }
+    public void resize() {
+        list = Arrays.copyOf(list, list.length*2);
     }
     
     /* Returns the count of occurances of a given item in the list*/
