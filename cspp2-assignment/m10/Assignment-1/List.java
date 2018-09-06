@@ -165,7 +165,8 @@ public class List {
      * Will the client invoke resize or is it internal to List class?
      * Should the resize be public method or private?
      * Should the resize method return any values?
-     * You know enough of Object Oriented Programming to answer these questions :-)
+     * You know enough of Object Oriented Programming to
+     * answer these questions :-)
      *
      */
 
@@ -332,9 +333,11 @@ public class List {
     }
     /*Inserts all the elements of specified int
      array to the end of list*/
-     /**
-      * addall.
-      */
+    /**
+     * Adds all.
+     *
+     * @param      items  The items
+     */
     public void addAll(final int[] items) {
         int j = 0;
         for (int i = size; i < size + items.length; i++) {
