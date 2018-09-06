@@ -268,17 +268,18 @@ public class List {
     }
    /*Inserts all the elements of specified int 
     array to the end of list*/
-    public void addAll(int items[])
-    {
-        // write the logic
-        int j = 0;
-        for (int i = size; i < size + items.length; i++) {
-            list[i] = items[j];
-            j++;
-        }
-        size = size + items.length;
-    }
+    public void addAll(int items[]) {
+            int j = 0;
+            for (int i = size; i < size + items.length; i++) {
+                list[i] = items[j];
+                j++;
+            }
+            size = size + items.length;
 
+
+
+    }
+    
      /* 
         Inserts the specified element at the specified index 
 	by moving all the elements to the right.
