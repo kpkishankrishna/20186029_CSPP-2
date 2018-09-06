@@ -269,11 +269,13 @@ public class List {
     array to the end of list*/
     public void addAll(int items[])
     {
-        // write the logic 
-        for (int i = 0; i < size + items.length; i++) {
-            list[size] = items[i];
-            size++;
+        // write the logic
+        int j = 0;
+        for (int i = size; i < size + items.length; i++) {
+            list[i] = items[j];
+            j = 0;
         }
+        size = size + items.length;
     }
 
      /* 
