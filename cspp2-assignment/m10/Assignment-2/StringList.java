@@ -127,14 +127,28 @@ public class StringList implements StringListInterface{
     array to the end of list*/
    
     public void addAll(String[] items) {
-        int j = 0;
-        for (int i = size; i < size + items.length; i++) {
-            list[i] = items[j];
-            j++;
+        if (size + items.length < list.length) {
+            int j = 0;
+            for (int i = size; i < size + items.length; i++) {
+                list[i] = items[j];
+                j++;
+            }
+            size = size + items.length;
         }
-        size = size + items.length;
+        else {
+            resize();
+            int j = 0;
+            for (int i = size; i < size + items.length; i++) {
+                list[i] = items[j];
+                j++;
+            }
+            size = size + items.length;
+        }
 		
 	}
+    public void resize() {
+        list = Arrays.copyOf(list, list.length * 2);
+    }
     /*
      * The size method returns the value of the size.
      * The purpose of the method is to announce the size of the list
