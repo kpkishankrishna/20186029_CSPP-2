@@ -82,7 +82,8 @@ public class List {
         // What should be the default values?
         // In the case of the list, it should be empty but
         // it should be initialized with an array size like 10
-        list = new int[20];
+        final int magic = 20;
+        list = new int[magic];
 
         // Think about the initial value for size.
         // How many items do we have in the list when you create it?
@@ -155,7 +156,8 @@ public class List {
      * with the contents of the original array.
      *
      * TODO
-     * Create a method called resize(). Resize should create an new array that is
+     * Create a method called resize(). Resize should create an new
+     * array that is
      * double the size of the old array.
      * Then copy the contents of the old array to the new one.
      *
@@ -276,8 +278,9 @@ public class List {
      * @return     String representation of the object.
      */
     public String toString() {
-        if (size == 0)
+        if (size == 0) {
             return "[]";
+        }
         String str = "[";
         int i = 0;
         for (i = 0; i < size - 1; i++) {
@@ -321,8 +324,9 @@ public class List {
      */
     public int indexOf(final int item) {
         for (int i = 0; i < size; i++) {
-            if (item == list[i])
+            if (item == list[i]) {
                 return i;
+            }
         }
         return -1;
     }
@@ -331,7 +335,7 @@ public class List {
      /**
       * addall.
       */
-    public void addAll(final int items[]) {
+    public void addAll(final int[] items) {
         int j = 0;
         for (int i = size; i < size + items.length; i++) {
             list[i] = items[j];
@@ -379,6 +383,13 @@ public class List {
     }
 
     /* Returns the count of occurances of a given item in the list*/
+    /**
+     * count.
+     *
+     * @param      item  The item
+     *
+     * @return     { description_of_the_return_value }
+     */
     public int count(final int item) {
         // write the logic
         int count = 0;
