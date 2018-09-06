@@ -38,18 +38,38 @@ public class List<E> {
     public void add(E item) {
         //Inserts the specified element at the end of the list.
         //You can modify the code in this method.
-        list[(size++)] = item;
+        if (size < list.length){
+            list[size++] = item;
+        }
+        else{
+            resize();
+            list[size++] = item;
+        }
+    }
+    public void resize() {
+        list = Arrays.copyOf(list, list.length*2);
     }
     /*Inserts all the elements of specified int 
     array to the end of list*/
     public void addAll(E[] items) {
         //Write logic for addAll method
-        int j = 0;
-        for (int i = size; i < size + items.length; i++) {
-        	list[i] = items[j];
-        	j++;
+        if (size + items.length < list.length) {
+            int j = 0;
+            for (int i = size; i < size + items.length; i++) {
+                list[i] = items[j];
+                j++;
+            }
+            size = size + items.length;
         }
-        size = size + items.length;
+        else {
+            resize();
+            int j = 0;
+            for (int i = size; i < size + items.length; i++) {
+                list[i] = items[j];
+                j++;
+            }
+            size = size + items.length;
+        }
     }
     /*
      * The size method returns the value of the size.
@@ -83,10 +103,14 @@ public class List<E> {
      */
     public void remove(int index) {
         //Write logic for remove method
-        for (int i = index; i < size-1; i++) {
-        	list[i] = list[i + 1];
+        if(index >= 0 && index < size) {
+            for(int i = index; i < size - 1; i++) {
+                list[i] = list[i + 1];
+            }
+            size--;
+        } else {
+            System.out.println("Invalid Position Exception");
         }
-        size--;
 
     }
     /*
@@ -102,8 +126,12 @@ public class List<E> {
      */
     public E get(int index) {
          //Write logic for get method
-        return list[index];
-    }
+        //if(index < 0 || index >= size) {
+          //  return "-1";
+        //} else {
+            return list[index];
+        }
+    
     /*
      * What happens when you print an object using println?
      * Java provides a method named toString that is internally
@@ -145,7 +173,7 @@ public class List<E> {
      */
     public boolean contains(E item) {
 		//Write logic for contains method
-        return indexOf(item) == -1;
+        return indexOf(item) >= -1;
     }
     /*
      * Returns the index of the first occurrence 
@@ -155,7 +183,7 @@ public class List<E> {
     public int indexOf(E item) {
        //Write logic for indexOf method
         for(int i = 0; i < size; i++) {
-            if(item == list[i])
+            if(list[i].equals(item))
                 return i;
         }
         return -1;
