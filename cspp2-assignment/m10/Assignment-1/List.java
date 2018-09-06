@@ -273,7 +273,7 @@ public class List {
         int j = 0;
         for (int i = size; i < size + items.length; i++) {
             list[i] = items[j];
-            j = 0;
+            j++;
         }
         size = size + items.length;
     }
