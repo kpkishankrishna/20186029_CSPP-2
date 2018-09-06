@@ -1,7 +1,9 @@
 import java.io.BufferedInputStream;
 import java.util.Scanner;
 import java.util.Arrays;
-
+/**
+ * List of .
+ */
 public class List {
     //Implement all the methods mentioned to build a ListADT
 
@@ -61,6 +63,9 @@ public class List {
      * The purpose of the constructor is to initialize the
      * class variables with some default values.
      */
+    /**
+     * Constructs the object.
+     */
 
 
 
@@ -94,6 +99,11 @@ public class List {
      * constructor.
      *
      */
+    /**
+     * Constructs the object.
+     *
+     * @param      capacity  The capacity
+     */
     public List(int capacity) {
         size = 0;
         list = new int[capacity];
@@ -109,6 +119,11 @@ public class List {
      * to the list.
      *
      * The method returns void (nothing)
+     */
+    /**
+     * Add.
+     *
+     * @param      item  The item
      */
     public void add(int item) {
         //Inserts the specified element at the end of the zelist.
@@ -155,6 +170,11 @@ public class List {
      *
      * The method returns an int. Empty list should return 0.
      */
+    /**
+     * size.
+     *
+     * @return     { description_of_the_return_value }
+     */
     public int size() {
         return size;
     }
@@ -178,6 +198,11 @@ public class List {
      * So, the new array looks like this.
      * array = [1,3,0,0,0,0,0,0,0,0]
      * The method returns void (nothing)
+     */
+    /**
+     * remove.
+     *
+     * @param      index  The index
      */
 
     public void remove(int index) {
@@ -203,6 +228,13 @@ public class List {
      * in the list then that would mean the item doesn't exist.
      * How do we check if the position is greater than the
      * number of items in the list? Would size variable be useful?
+     */
+    /**
+     * get.
+     *
+     * @param      index  The index
+     *
+     * @return     { description_of_the_return_value }
      */
     public int get(int index) {
         if (index < 0 || index >= size) {
@@ -232,6 +264,11 @@ public class List {
      * not all the elements of the array.
      *
      */
+    /**
+     * Returns a string representation of the object.
+     *
+     * @return     String representation of the object.
+     */
     public String toString() {
         if (size == 0)
             return "[]";
@@ -250,6 +287,13 @@ public class List {
      * So, iterate through the list and return true if
      * the item exists and otherwise false
      */
+    /**
+     * contains.
+     *
+     * @param      item  The item
+     *
+     * @return     { description_of_the_return_value }
+     */
     public boolean contains(int item) {
         return indexOf(item) == -1;
     }
@@ -258,6 +302,13 @@ public class List {
      * Returns the index of the first occurrence
      * of the specified element in this list,
      * or -1 if this list does not contain the element.
+     */
+    /**
+     * Searches for the first match.
+     *
+     * @param      item  The item
+     *
+     * @return     { description_of_the_return_value }
      */
     public int indexOf(int item) {
         for (int i = 0; i < size; i++) {
@@ -268,6 +319,9 @@ public class List {
     }
     /*Inserts all the elements of specified int
      array to the end of list*/
+     /**
+      * addall.
+      */
     public void addAll(int items[]) {
         int j = 0;
         for (int i = size; i < size + items.length; i++) {
@@ -285,6 +339,12 @@ public class List {
     by moving all the elements to the right.
            The method returns void (nothing)
         */
+    /**
+     * Add.
+     *
+     * @param      index  The index
+     * @param      item   The item
+     */
     public void add(int index, int item) {
         // write the logic
         if (index < 0) {
@@ -302,6 +362,9 @@ public class List {
             size++;
         }
     }
+    /**
+     * resize.
+     */
     public void resize() {
         list = Arrays.copyOf(list, list.length * 2);
     }
@@ -317,6 +380,11 @@ public class List {
         }
         return count;
     }
+    /**
+     * main.
+     *
+     * @param      args  The arguments
+     */
 
 
     public static void main(String[] args) {
