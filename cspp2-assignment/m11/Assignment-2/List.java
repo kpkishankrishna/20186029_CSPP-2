@@ -15,7 +15,7 @@ public class List<E> {
     //Constructor
     public List() {
         // Create a variable of the type Object[]
-        list = ((E[])new Object[10]);//Object is the base class for all the classes
+        list =((E[])new Object[10]);//Object is the base class for all the classes
         size = 0;
     }
     //Overloaded Constructor
@@ -32,9 +32,9 @@ public class List<E> {
      * to the list.
      */
     public void add(E item) {
-        //Inserts the specified element at the end of the list.
+        /*Inserts the specified element at the end of the list.
         //You can modify the code in this method.
-        // list[(size++)] = item;
+        // list[(size++)] = item;*/
         if (size == list.length) {
             resize();
         }
@@ -43,17 +43,15 @@ public class List<E> {
     /*Inserts all the elements of specified int
     array to the end of list*/
     public void addAll(E[] items) {
-        //Write logic for addAll method
-        for (int i = 0; i < items.length; i++) {
+        for(int i = 0; i < items.length; i++) {
             add(items[i]);
-        }
+        }  
     }
     /**
      * { function_description }
      */
     private void resize(){
-        list = Arrays.copyOf(list, size * 2);
-
+         list  =Arrays.copyOf(list,2 * size);
     }
 
     /*
@@ -66,6 +64,9 @@ public class List<E> {
     public int size() {
     	return size;
     }
+    /**.
+     * { item_description }
+     */
     /*
      * The remove method does what the name suggests.
      * Removes a String item, specified by the index argument, from the list
@@ -87,8 +88,7 @@ public class List<E> {
      * The method returns void (nothing)
      */
     public void remove(int index) {
-        //Write logic for remove method
-        if (index >= 0 && index < size) {
+       if (index >= 0 && index < size) {
             for (int i = index; i < size - 1; i++) {
                 list[i] = list[i + 1];
             }
@@ -108,10 +108,17 @@ public class List<E> {
      * How do we check if the position is greater than the
      * number of items in the list? Would size variable be useful?
      */
+    /**.
+     * { function_description }
+     *
+     * @param      index  The index
+     *
+     * @return     { description_of_the_return_value }
+     */
     public E get(int index) {
          //Write logic for get method
         // return list[index];
-        if (index < 0 && index >= size) {
+        if (index < 0 || index >= size) {
             return null;
         } else {
             return list[index];
@@ -157,9 +164,10 @@ public class List<E> {
      * the item exists and otherwise false
      */
     public boolean contains(E item) {
-		//Write logic for contains method
-        return indexOf(item) != -1;
-
+        if (indexOf(item) == -1){
+            return false;
+        }
+        return true;
     }
     /*
      * Returns the index of the first occurrence
@@ -168,8 +176,8 @@ public class List<E> {
      */
 
     public int indexOf(E item) {
-       //Write logic for indexOf method
-        for (int i = 0; i < size; i++) {
+
+       for (int i = 0; i < size; i++) {
             if (item.equals(list[i])) {
                 return i;
             }
@@ -180,58 +188,53 @@ public class List<E> {
     /* Removes all of its elements that
      * are contained in the specified int array.
      */
-    public void removeAll(E[] items)
-    {	
-    	for (int i = 0; i < items.length; i++) {
+    public void removeAll(E[] items) {
+
+        for(int i = 0; i < items.length; i++) {
             int index = indexOf(items[i]);
-            while (index != -1) {
+            while(index != -1) {
                 remove(index);
                 index = indexOf(items[i]);
             }
         }
-        // write the logic
     }
-
     /*Returns a list containing elements, including
      startIndex and excluding endIndex. The first parameter
      indicates the startIndex and the second parameter
      indicates the endIndex.
      */
-    public List subList(int start, int end) {
-    	List sublist = new List();
-        if (start >= 0 && end >= 0) {
-            if (start == end) {
-                System.out.println("Index Out of Bounds Exception");
-                return null;
-            }
-            if (size == 0) {
-                System.out.println("Index Out of Bounds Exception");
-                return null;
-            } else if (start < end) {
-                for (int i = start; i < end; i++) {
-                    sublist.add(list[i]);
-                }
-                return sublist;
-            } else {
-                System.out.println("Index Out of Bounds Exception");
-                return null;
-            }
-        } else {
+    public List subList(int n, int n2) {
+       
+        if(n < 0 || n2 < 0){
             System.out.println("Index Out of Bounds Exception");
             return null;
         }
-    }
+        if(n > size || n2 > size || n > n2){
+            System.out.println("Index Out of Bounds Exception");
+            return null;
+        }
+        if(n == n2 && n >= size){
+            System.out.println("Index Out of Bounds Exception");
+            return null;
+        }
+        List l1 = new List();
+        for(int i = n ;i < n2 ; i++) {
+                l1.add(list[i]);
+            }
+            return l1;
+        }
+           
     /*Returns a boolean indicating whether the parameter
       i.e a List object is exactly matching with the given list or not.
      */
-    public boolean equals(List<E> listdata)
-    {
-        return this.toString().equals(listdata.toString());
+    public boolean equals(List<E> listdata) {
+
+        return toString().equals(listdata.toString());
     }
+
     /*Removes all the elements from list*/
-    public void clear()
-    {
-        size=0;
-        // write the logic for clear.
+    public void clear() {
+    
+        size = 0;
     }
 }
