@@ -230,11 +230,19 @@ public class List {
      array.
     */
     public void removeAll(int[] newArray) {
-        for (int i = 0; i < size; i++) {
-            for (int j = 0; i < newArray.length; i++) {
-                if (intList[i] == newArray[j]) {
-                    remove(i);
-                    i--;
+        // for (int i = 0; i < size; i++) {
+        //     for (int j = 0; i < newArray.length; i++) {
+        //         if (intList[i] == newArray[j]) {
+        //             remove(i);
+        //             i--;
+        //         }
+        //     }
+        // }
+        for (int i = 0; i < newArray.length; i++) {
+            for (int j = 0; j < size; j++) {
+                if (newArray[i] == intList[j]) {
+                    remove(j);
+                    j--;
                 }
             }
         }
