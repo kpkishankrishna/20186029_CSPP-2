@@ -179,9 +179,6 @@ public class List {
             str = str + intList[i] + ",";
         }
         str = str + intList[i] + "]";
-        if (intList[0] == 0) {
-            str += "\nInvalid Position Exception";
-        }
         return str;
     }
     /*
