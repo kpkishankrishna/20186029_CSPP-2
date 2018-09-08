@@ -138,10 +138,10 @@ class Set {
         if (size == 0 || newSet.size() == 0) {
             return null;
         }
-        int[][] array = new int[size][newSet.size()];
+        int[][] array = new int[size][2];
         for (int i = 0; i < size; i++) {
             for (int j = 0; j < newSet.size(); j++) {
-                if (j % 2 == 0) {
+                if (j == 0) {
                     array[i][j] = list[i];
                 }
                 else {
