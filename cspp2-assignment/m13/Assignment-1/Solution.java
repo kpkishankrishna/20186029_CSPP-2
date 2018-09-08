@@ -13,7 +13,7 @@ class Set {
 	private int size;
 	public Set() {
 		size = 0;
-		list = new int[10];
+		list = new int[100];
 	}
 	public int size() {
 		return size;
@@ -81,6 +81,7 @@ class Set {
 			return null;
 		}
 		return null;
+
 	}
 
 
