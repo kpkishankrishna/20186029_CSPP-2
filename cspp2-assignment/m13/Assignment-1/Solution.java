@@ -135,11 +135,30 @@ class Set {
      * @return     array.
      */
     public int[][] cartesianProduct(final Set newSet) {
-        if (size == 0 || newSet.size == 0) {
+        if (size == 0 || newSet.size() == 0) {
             return null;
         }
-        return null;
+        int[][] array = new int[size][newSet.size()];
+        for (int i = 0; i < size; i++) {
+            for (int j = 0; j < newSet.size(); j++) {
+                if (j % 2 == 0) {
+                    array[i][j] = list[i];
+                }
+                else {
+                    array[i][j] = newSet.get(j);
+                }
+            }
+        }
+        return array;
 
+
+    }
+    public int get(final int index) {
+        // Replace the code below to write the code for get
+        // if (index < 0 || index >= size) {
+        //     return -1;
+        // }
+        return list[index];
     }
 
 
