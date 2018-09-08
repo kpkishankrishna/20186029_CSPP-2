@@ -119,7 +119,7 @@ class Set {
 		}
 		for (int i = 0; i < size; i++) {
 			for ( int j = 0; j < newArray.length; j++) {
-				if (list[i] == newArray[i]) {
+				if (list[i] == newArray[j]) {
 					retain.add(list[i]);
 				}
 
