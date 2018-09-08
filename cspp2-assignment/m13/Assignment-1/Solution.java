@@ -11,14 +11,29 @@ class Set {
 	//Good luck :-)
 	private int[] list;
 	private int size;
+	/**
+	 * Constructs the object.
+	 */
 	public Set() {
 		size = 0;
 		list = new int[100];
 	}
+	/**
+	 * returns size.
+	 *
+	 * @return     returns size.
+	 */
 	public int size() {
 		return size;
 	}
-	public boolean contains(int item) {
+	/**
+	 * contains method.
+	 *
+	 * @param      item  The item
+	 *
+	 * @return     true or false.
+	 */
+	public boolean contains(final int item) {
 		for (int i = 0; i < size; i++) {
 			if (list[i] == item) {
 				return true;
@@ -26,6 +41,11 @@ class Set {
 		}
 		return false;
 	}
+	/**
+	 * Returns a string representation of the object.
+	 *
+	 * @return     String representation of the object.
+	 */
 	public String toString() {
 		if (size == 0) {
 			return "{}";
@@ -36,7 +56,12 @@ class Set {
 		}
 		return str + list[size - 1] + "}";
 	}
-	public void add(int item) {
+	/**
+	 * add method.
+	 *
+	 * @param      item  The item
+	 */
+	public void add(final int item) {
 		if (size == list.length) {
 			resize();
 		}
@@ -44,18 +69,33 @@ class Set {
 			list[size++] = item;
 		}
 	}
+	/**
+	 * resize.
+	 */
 	private void resize() {
 		/**.
 		 * array.
 		 */
 		list = Arrays.copyOf(list, 2 * size);
 	}
-	public void add(int[] newArray) {
+	/**
+	 * add all elements.
+	 *
+	 * @param      newArray  The new array
+	 */
+	public void add(final int[] newArray) {
 		for (int i = 0; i < newArray.length; i++) {
 			add(newArray[i]);
 		}
 	}
-	public Set intersection(Set newSet) {
+	/**
+	 * intersection.
+	 *
+	 * @param      newSet  The new set
+	 *
+	 * @return     set.
+	 */
+	public Set intersection(final Set newSet) {
 		Set intersect = new Set();
 		for (int i = 0; i < size; i++) {
 			if (newSet.contains(list[i])) {
@@ -64,7 +104,14 @@ class Set {
 		}
 		return intersect;
 	}
-	public Set retainAll(int[] newArray) {
+	/**
+	 * retain all.
+	 *
+	 * @param      newArray  The new array
+	 *
+	 * @return     { description_of_the_return_value }
+	 */
+	public Set retainAll(final int[] newArray) {
 		Set retain = new Set();
 		if (size == 0 || newArray.length == 0) {
 			size = 0;
@@ -80,7 +127,14 @@ class Set {
 		}
 		return retain;
 	}
-	public int[][] cartesianProduct(Set newSet) {
+	/**
+	 * cartesian.
+	 *
+	 * @param      newSet  The new set
+	 *
+	 * @return     array.
+	 */
+	public int[][] cartesianProduct(final Set newSet) {
 		if (size == 0 || newSet.size == 0) {
 			return null;
 		}
