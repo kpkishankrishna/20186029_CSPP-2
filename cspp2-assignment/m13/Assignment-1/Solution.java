@@ -144,9 +144,9 @@ class Set {
                 if (j % 2 == 0) {
                     array[i][j] = list[i];
                 }
-                
-            array[i][j] = newSet.get(j);
-                
+                else {
+                    array[i][j] = newSet.get(j);
+                }
             }
         }
         return array;
