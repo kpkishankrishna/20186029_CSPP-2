@@ -67,7 +67,7 @@ class Set {
 	public Set retainAll(int[] newArray) {
 		Set retain = new Set();
 		if (size == 0 || newArray.length == 0) {
-			return retain;
+			System.out.println("{}");
 		}
 		for (int i = 0; i < size; i++) {
 			for ( int j = 0; j < newArray.length; j++) {
@@ -93,19 +93,6 @@ class Set {
 
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /**
  * Solution class for code-eval.
