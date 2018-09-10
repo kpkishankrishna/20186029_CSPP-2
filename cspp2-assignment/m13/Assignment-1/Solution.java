@@ -110,7 +110,7 @@ class Set {
             }
         }
         return intersect;
-        
+
     }
     /**
      * retain all.
@@ -146,18 +146,18 @@ class Set {
         if (size == 0 || newSet.size() == 0) {
             return null;
         }
-        int[][] array = new int[size*newSet.size][2];
+        int[][] array = new int[size * newSet.size][2];
         int k = 0;
         for (int i = 0; i < size; i++) {
             for (int j = 0; j < newSet.size(); j++) {
                 array[k][0] = list[i];
                 array[k][1] = newSet.get(j);
                 k++;
-                }
             }
-            return array;
-
         }
+        return array;
+
+    }
     public int get(final int index) {
         // Replace the code below to write the code for get
         // if (index < 0 || index >= size) {
