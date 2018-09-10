@@ -20,7 +20,7 @@ class Set {
     /**
      * Constructs the object.
      */
-    public Set() {
+    Set() {
         size = 0;
         list = new int[100];
     }
