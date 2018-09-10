@@ -22,7 +22,8 @@ class Set {
      */
     Set() {
         size = 0;
-        list = new int[100];
+        final int magic = 100;
+        list = new int[magic];
     }
     /**
      * returns size.
