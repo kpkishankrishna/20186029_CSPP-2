@@ -126,8 +126,8 @@ class Set {
             return retain;
         }
         for (int i = 0; i < size; i++) {
-            for ( int j = 0; j < newArray.length; j++) {
-                if ( list[i] == newArray[j]) {
+            for (int j = 0; j < newArray.length; j++) {
+                if (list[i] == newArray[j]) {
                     retain.add(list[i]);
                 }
 
@@ -158,6 +158,13 @@ class Set {
         return array;
 
     }
+    /**
+     * gets the particular value in that index.
+     *
+     * @param      index  The index
+     *
+     * @return     { description_of_the_return_value }
+     */
     public int get(final int index) {
         // Replace the code below to write the code for get
         // if (index < 0 || index >= size) {
