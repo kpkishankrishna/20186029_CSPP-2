@@ -96,6 +96,7 @@ class Set {
      * @return     set.
      */
     public Set intersection(final Set newSet) {
+        int[] newArray = newSet.list;
         Set intersect = new Set();
         for (int i = 0; i < size; i++) {
             if (newSet.contains(list[i])) {
@@ -103,6 +104,7 @@ class Set {
             }
         }
         return intersect;
+        
     }
     /**
      * retain all.
@@ -139,20 +141,17 @@ class Set {
             return null;
         }
         int[][] array = new int[size][2];
+        int k = 0;
         for (int i = 0; i < size; i++) {
             for (int j = 0; j < newSet.size(); j++) {
-                if (j == 0) {
-                    array[i][j] = list[i];
-                }
-                else {
-                    array[i][j] = newSet.get(j);
+                array[k][0] = list[i];
+                array[k][1] = newSet.get(j);
+                k++;
                 }
             }
+            return array;
+
         }
-        return array;
-
-
-    }
     public int get(final int index) {
         // Replace the code below to write the code for get
         // if (index < 0 || index >= size) {
@@ -160,13 +159,14 @@ class Set {
         // }
         return list[index];
     }
-
-
-
-
-
-
 }
+
+
+
+
+
+
+
 
 /**
  * Solution class for code-eval.
