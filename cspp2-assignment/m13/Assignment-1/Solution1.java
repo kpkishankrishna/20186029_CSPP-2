@@ -1,7 +1,7 @@
 import java.io.BufferedInputStream;
 import java.util.Scanner;
 
-public class Set {
+class Set {
 
     /**
      * This constant is used to create an array
