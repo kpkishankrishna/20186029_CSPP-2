@@ -184,8 +184,9 @@ public class List extends Exception {
 			if (index >= 0 && index < size) {
 			for (int i = index; i < size - 1; i++) {
 				list[i] = list[i + 1];
+				size--;
 			}
-			size--;
+			
 			} else {
 				throw new Exception("Invalid Position Exception");
 			}
