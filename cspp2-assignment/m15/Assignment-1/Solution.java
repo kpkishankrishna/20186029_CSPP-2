@@ -3,6 +3,7 @@ import java.util.Scanner;
 import java.util.Arrays;
 /**
  * Class for set.
+ * @author : sairam.
  */
 class SortedSetADT {
   /**
@@ -25,7 +26,7 @@ class SortedSetADT {
     size = 0;
   }
   /**
-   * size.
+   * returns size of set.
    *
    * @return     int size.
    */
@@ -33,7 +34,7 @@ class SortedSetADT {
     return size;
   }
   /**
-   * contains.
+   * it checks if the set contains the element or not.
    *
    * @param      item  The item.
    *
@@ -66,7 +67,7 @@ class SortedSetADT {
     return str;
   }
   /**
-   * add.
+   * addAll is used to add a new array to the set.
    *
    * @param      newArray  The new array.
    */
@@ -78,7 +79,7 @@ class SortedSetADT {
     Arrays.sort(set);
   }
   /**
-   * add.
+   * add function is used to add the elements into the set.
    *
    * @param      item  The item.
    */
@@ -91,7 +92,7 @@ class SortedSetADT {
     }
   }
   /**
-   * resize.
+   *this is used to resize the set when it is full.
    */
   public void resize() {
     int resizefactor = 2;
@@ -102,17 +103,18 @@ class SortedSetADT {
     set = temp;
   }
   /**
-   * get.
+   * get function gives the element of given index.
    *
    * @param      index  The index.
    *
-   * @return     item.
+   * @return    returns item.
    */
   public int get(final int index) {
     return set[index];
   }
   /**
-   * intersection.
+   * intersection function returns a set which of elements.
+   * which are common in both the sets.
    *
    * @param      t     set.
    *
@@ -129,8 +131,8 @@ class SortedSetADT {
     } return intersection;
   }
   /**
-   * retainAll.
-   *
+   * retainAll function returns a set which of elements.
+   * which are common in both the sets.
    * @param      array  The array.
    *
    * @return     retainAll set.
@@ -146,11 +148,11 @@ class SortedSetADT {
     } return retainAll;
   }
   /**
-   * cartesianProduct.
+   * cartesianProduct finds the product of two sets.
    *
    * @param      t     set.
    *
-   * @return     2d array.
+   * @return     returns a 2d array
    */
 
   public int[][] cartesianProduct(final SortedSetADT t) {
@@ -169,12 +171,12 @@ class SortedSetADT {
     return null;
   }
   /**
-   * subset.
+   * subset returns the set between the fromElement and toElement
    *
    * @param      fromElement  The from element.
    * @param      toElement    To element.
    *
-   * @return      description_of_the_return_value
+   * @return      returns subset.
    */
   public int[] subSet(final int fromElement, final  int toElement) {
     int[] temp = new int[x];
@@ -188,11 +190,11 @@ class SortedSetADT {
     return temp;
   }
   /**
-   * headset.
+   * headset returns the values in the set less than given element.
    *
    * @param      toElement  To element.
    *
-   * @return      description_of_the_return_value
+   * @return      returns set.
    */
   public int[] headSet(final int toElement) {
     int[] temp = new int[x];
@@ -235,9 +237,9 @@ public final class Solution {
   /**
    * helper function to convert string input to int array.
    *
-   * @param      s      string input from test case file
+   * @param      s     string input from test case file
    *
-   * @return      int array from the given string
+   * @return     int array from the given string
    */
   public static int[] intArray(final String s) {
     String input = s;
