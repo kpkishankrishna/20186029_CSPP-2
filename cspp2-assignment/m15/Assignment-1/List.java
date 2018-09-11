@@ -184,7 +184,7 @@ public class List extends Exception {
 			if (index >= 0 && index < size) {
 			for (int i = index; i < size - 1; i++) {
 				list[i] = list[i + 1];
-				
+
 			}
 			size--;
 			} else {
@@ -412,6 +412,15 @@ public class List extends Exception {
 		 * { item_description }
 		 */
 		return toString().equals(newlist.toString());
+	}
+	public int count(int element) {
+		int count = 0;
+		for (int i = 0; i < size; i++) {
+			if (list[i] == element) {
+				count++;
+			}
+		}
+		return count;
 	}
 	/**.
 	 * { item_description }
