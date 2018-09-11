@@ -480,8 +480,9 @@ public class List extends Exception {
 				break;
 			case "count":
 				if (tokens.length == 2) {
-					l.count(Integer.parseInt(tokens[1]));
+					System.out.println(l.count(Integer.parseInt(tokens[1])));
 				}
+				break;
 			case "remove":
 				if (tokens.length == 2) {
 					l.remove(Integer.parseInt(tokens[1]));
