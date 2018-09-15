@@ -107,15 +107,15 @@ public final class Solution {
 		String[] errors = a.split(":");
 		String[] errorsQuestion = errors[1].split(",");
 		int help = Integer.parseInt(errors[2]);
-		if (errors[0] == null) {
+		if (errors[0] == null || errors.length < 5) {
 			System.out.println("Error! Malformed question");
 			return;
 		}
 
-		if (errors.length < 5) {
-			System.out.println("Error! Malformed question");
-			return;
-		}
+		// if () {
+		// 	System.out.println("Error! Malformed question");
+		// 	return;
+		// }
 		int penalyerrors = Integer.parseInt(errors[4]);
 		if (penalyerrors > 0) {
 			System.out.println("Invalid penalty for " + errors[0]);
