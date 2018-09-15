@@ -111,22 +111,22 @@ public final class Solution {
 			System.out.println("Error! Malformed question");
 			return;
 		}
-		int penalyerrors = Integer.parseInt(errors[4]);
-		if (penalyerrors > 0) {
+		int penalityyerrors = Integer.parseInt(errors[4]);
+		if (penalityyerrors > 0) {
 			System.out.println("Invalid penalty for " + errors[0]);
 			return;
 		}
-		int markserrors = Integer.parseInt(errors[3]);
-		if (markserrors < 0) {
+		int scoreerrors = Integer.parseInt(errors[3]);
+		if (scoreerrors < 0) {
 			System.out.println("Invalid max marks for " + errors[0]);
-			return;
-		}
-		if (number > 4) {
-			System.out.println("Error! Correct answer choice number is out of range for question text 1");
 			return;
 		}
 		if (errorsQuestion.length < 4) {
 			System.out.println(errors[0] + " does not have enough answer choices");
+			return;
+		}
+		if (number > 4) {
+			System.out.println("Error! Correct answer choice number is out of range for question text 1");
 			return;
 		}
 
