@@ -8,10 +8,7 @@ public class Task {
 	Task(String tasktitle, String nameofperson, int minutes, boolean important,
 		boolean urgent, String status) {
 		this.tasktitle = tasktitle;
-		if (tasktitle.equals("")) {
-			System.out.println("Title not provided");
-			throw new NullPointerException();
-		}
+
 		this.nameofperson = nameofperson;
 		this.minutes = minutes;
 		this.important = important;
@@ -19,6 +16,10 @@ public class Task {
 		this.status = status;
 	}
 	public String toString() {
+		if (tasktitle.equals("")) {
+			System.out.println("Title not provided");
+			throw new NullPointerException();
+		}
 		String one = "";
 		String two = "";
 		if (urgent){
