@@ -20,6 +20,10 @@ public class Task {
 			System.out.println("Title not provided");
 			throw new NullPointerException();
 		}
+		if (minutes < 0) {
+			System.out.println("Invalid timetoComplete "+ minutes);
+			throw new IllegalArgumentException();
+		}
 		String one = "";
 		String two = "";
 		if (urgent){
