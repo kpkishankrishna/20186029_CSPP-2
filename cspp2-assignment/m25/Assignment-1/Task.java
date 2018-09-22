@@ -185,5 +185,17 @@ class Todoist {
             System.out.println(objectsoftask[i]);
         }
         return "";
-  } 
+  }
+  	// public int totalTime4Completion() {
+   //      finalObject();
+   //      int total = 0;
+
+   //      for (int i =0; i <tasks.length; i++) { 
+   //          String z = tasks[i].status();
+   //          if (z.equals("todo")) {
+   //          total += tasks[i].timeToComplete();
+   //      }
+   //      }
+   //      return total;
+   //    }
  }
