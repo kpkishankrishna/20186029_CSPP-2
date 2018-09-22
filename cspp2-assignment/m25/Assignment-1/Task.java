@@ -147,45 +147,7 @@ class Task {
         return s;
     }
 }
-class Todoist {
-    private Task[] objectsoftask;
-    private int sizeofobject;
-    Todoist() {
-        objectsoftask = new Task[1];
-        sizeofobject = 0;
 
-    }
-    private void resize() {
-        Task[] newset = new Task[2 * objectsoftask.length];
-        System.arraycopy(objectsoftask, 0, newset, 0, objectsoftask.length);
-        objectsoftask = newset;
-    }
-    public void addTask(Task t) {
-        if (sizeofobject == objectsoftask.length) {
-            resize();
-            addTask(t);
-        } else {
-
-            objectsoftask[sizeofobject++] = t;
-        }
-    }
-    
-    
-    public void finalObject() {
-        Task[] newset = new Task[sizeofobject];
-        for(int i = 0; i < sizeofobject; i++) {
-            newset[i] = objectsoftask[i];
-        }
-        objectsoftask = newset;
-    }
-    public String toString() {
-        String str = "";
-        finalObject();
-        for (int i =0; i <objectsoftask.length; i++) {
-            System.out.println(objectsoftask[i]);
-        }
-        return "";
-  }
   	// public int totalTime4Completion() {
    //      finalObject();
    //      int total = 0;
@@ -198,4 +160,4 @@ class Todoist {
    //      }
    //      return total;
    //    }
- }
+ 
