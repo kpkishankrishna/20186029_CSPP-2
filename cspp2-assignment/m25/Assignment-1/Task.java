@@ -10,7 +10,7 @@ class Task {
     }
     Task(String tasktitle, String nameofperson, int minutes, boolean important, boolean urgent, String status) throws Exception {
             if (tasktitle.equals("")) {
-                throw  new Exception("title not provided");
+                throw  new Exception("Title not provided");
 
         } else {
                     this.tasktitle = tasktitle;
