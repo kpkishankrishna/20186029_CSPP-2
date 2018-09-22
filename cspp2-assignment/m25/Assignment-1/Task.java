@@ -1,31 +1,28 @@
 class Task {
-    private String title;
-    private String assignedTo;
-    private int timeToComplete;
+    private String tasktitle;
+    private String nameofperson;
+    private int minutes;
     private boolean important;
     private boolean urgent;
     private String status;
     Task() {
 
     }
-    Task(String title, String assignedTo, int timeToComplete, boolean important, boolean urgent, String status) throws Exception {
-            if (title.equals("")) {
-                throw  new Exception("Title not provided");
+    Task(String tasktitle, String nameofperson, int minutes, boolean important, boolean urgent, String status) throws Exception {
+            if (tasktitle.equals("")) {
+                throw  new Exception("tasktitle not provided");
 
         } else {
-                    this.title = title;
+                    this.tasktitle = tasktitle;
         }
-        this.assignedTo = assignedTo;
-/*      try {*/
-            if (timeToComplete >= 0) {
-        this.timeToComplete = timeToComplete;
+        this.nameofperson = nameofperson;
+            if (minutes >= 0) {
+        this.minutes = minutes;
         }
         else {
-            throw new Exception("Invalid timeToComplete " + timeToComplete);
+            throw new Exception("Invalid minutes " + minutes);
         }
-/*  } catch(Exception e) {
-        System.out.println("Invalid timeToComplete " + timeToComplete);
-    }*/
+
         this.important = important;
         this.urgent = urgent;
             if (status.equals("done") || status.equals("todo")) {
@@ -35,18 +32,16 @@ class Task {
         {
             throw new Exception("Invalid status " + status);
         }
-/*  } catch(Exception e) {
-        System.out.println("Invalid status " + status);
-    }*/
+
     }
-    public String title () {
-        return title;
+    public String tasktitle () {
+        return tasktitle;
     }
-    public String assignedTo() {
-        return assignedTo;
+    public String nameofperson() {
+        return nameofperson;
     }
-    public int timeToComplete() {
-        return timeToComplete;
+    public int minutes() {
+        return minutes;
     } 
     public String important() {
         String b = "";
@@ -82,7 +77,7 @@ class Task {
         } else {
             b = "Not Important";
         }
-        String s = title + ", " + assignedTo + ", " + timeToComplete + ", " + b + ", " + a + ", " + status;
+        String s = tasktitle + ", " + nameofperson + ", " + minutes + ", " + b + ", " + a + ", " + status;
         return s;
     }
 }
