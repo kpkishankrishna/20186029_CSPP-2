@@ -1,46 +1,88 @@
-public class Task {
-	private String tasktitle;
-	private String nameofperson;
-	private int minutes;
-	private boolean important;
-	private boolean urgent;
-	private String status;
-	Task(String tasktitle, String nameofperson, int minutes, boolean important,
-		boolean urgent, String status) {
-		this.tasktitle = tasktitle;
+class Task {
+    private String title;
+    private String assignedTo;
+    private int timeToComplete;
+    private boolean important;
+    private boolean urgent;
+    private String status;
+    Task() {
 
-		this.nameofperson = nameofperson;
-		this.minutes = minutes;
-		this.important = important;
-		this.urgent = urgent;
-		this.status = status;
-	}
-	public String toString() {
-		if (tasktitle.equals("")) {
-			System.out.println("Title not provided");
-			throw new NullPointerException();
-		}
-		if (minutes < 0) {
-			System.out.println("Invalid timetoComplete "+ minutes);
-			throw new IllegalArgumentException();
-		}
-		String one = "";
-		String two = "";
-		if (urgent){
-			one = "Urgent";
-		} else {
-			one = "Not Urgent";
-		}
-		if (important) {
-			two = "Important";
-		} else {
-			two = "Not Important";
-		}
-		if (tasktitle == "") {
-			System.out.println("Title not provided");
-		}
-		return (tasktitle + ", " + nameofperson + ", " + minutes + ", " + two + ", " + one + ", " + status);
+    }
+    Task(String title, String assignedTo, int timeToComplete, boolean important, boolean urgent, String status) throws Exception {
+            if (title.equals("")) {
+                throw  new Exception("Title not provided");
 
-	}
-
+        } else {
+                    this.title = title;
+        }
+        this.assignedTo = assignedTo;
+/*      try {*/
+            if (timeToComplete >= 0) {
+        this.timeToComplete = timeToComplete;
+        }
+        else {
+            throw new Exception("Invalid timeToComplete " + timeToComplete);
+        }
+/*  } catch(Exception e) {
+        System.out.println("Invalid timeToComplete " + timeToComplete);
+    }*/
+        this.important = important;
+        this.urgent = urgent;
+            if (status.equals("done") || status.equals("todo")) {
+            this.status = status;   
+        
+        } else 
+        {
+            throw new Exception("Invalid status " + status);
+        }
+/*  } catch(Exception e) {
+        System.out.println("Invalid status " + status);
+    }*/
+    }
+    public String title () {
+        return title;
+    }
+    public String assignedTo() {
+        return assignedTo;
+    }
+    public int timeToComplete() {
+        return timeToComplete;
+    } 
+    public String important() {
+        String b = "";
+        if (important) {
+            b = "Important";
+        } else {
+            b = "Not Important";
+        }
+        return b;
+    }
+    public String urgent() {
+        String a = "";
+        if (urgent) {
+            a = "Urgent";
+        } else {
+            a = "Not Urgent";
+        }
+        return a;
+    }
+    public String status() {
+        return status;
+    }
+    public String toString() {
+        String a = "";
+        String b = "";
+        if (urgent) {
+            a = "Urgent";
+        } else {
+            a = "Not Urgent";
+        }
+        if (important) {
+            b = "Important";
+        } else {
+            b = "Not Important";
+        }
+        String s = title + ", " + assignedTo + ", " + timeToComplete + ", " + b + ", " + a + ", " + status;
+        return s;
+    }
 }
