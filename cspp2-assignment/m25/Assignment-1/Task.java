@@ -28,7 +28,9 @@ public class Task {
 			two = "Not Important";
 		}
 		if (tasktitle == null) {
+			System.out.println("Title not provided");
 			throw new NullPointerException();
+
 		}
 		return (tasktitle + ", " + nameofperson + ", " + minutes + ", " + two + ", " + one + ", " + status);
 
