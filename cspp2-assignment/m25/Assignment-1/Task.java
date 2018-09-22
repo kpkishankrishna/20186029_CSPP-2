@@ -27,6 +27,9 @@ public class Task {
 		} else {
 			two = "Not Important";
 		}
+		if (tasktitle == null) {
+			throw new NullPointerException();
+		}
 		return (tasktitle + ", " + nameofperson + ", " + minutes + ", " + two + ", " + one + ", " + status);
 
 	}
