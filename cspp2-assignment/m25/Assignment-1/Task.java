@@ -27,7 +27,7 @@ public class Task {
 		} else {
 			two = "Not Important";
 		}
-		return (tasktitle + ", " + nameofperson + ", " + minutes + ", " + one + ", " + two + ", " + status);
+		return (tasktitle + ", " + nameofperson + ", " + minutes + ", " + two + ", " + one + ", " + status);
 
 	}
 
