@@ -27,7 +27,7 @@ public class Task {
 		} else {
 			two = "Not Important";
 		}
-		if (tasktitle == null) {
+		if (tasktitle == "") {
 			System.out.println("Title not provided");
 		}
 		return (tasktitle + ", " + nameofperson + ", " + minutes + ", " + two + ", " + one + ", " + status);
